@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="2WAY n8n Backup is a personal utility for securely backing up a self-hosted n8n instance from a local Windows computer to the owner's Google Drive using Rclone Crypt.">
+  <meta name="robots" content="index,follow">
+  <title>2WAY n8n Backup — Personal Encrypted Backups</title>
+  <style>
+    :root {color-scheme: light; --green:#1b6149; --mint:#e9f5ee; --ink:#17312a; --muted:#536a61; --line:#d7e5da; --white:#fff; --warm:#f9f6ee;}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f7faf7;color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:var(--green)}a:focus-visible{outline:3px solid #d39f4d;outline-offset:3px} .container{max-width:1080px;margin:auto;padding:0 24px}
+    header{background:var(--white);border-bottom:1px solid var(--line)}header .container{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:78px}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}.mark{display:flex;align-items:center;justify-content:center;background:var(--green);color:#fff;border-radius:12px;height:46px;width:58px;font-weight:850;letter-spacing:-1px;font-size:20px}.brand-copy{line-height:1.1}.brand-copy strong{display:block;font-size:17px}.brand-copy small{font-size:12px;color:var(--muted)}nav a{font-weight:600;text-decoration:none;margin-left:22px}
+    .hero{padding:82px 0 70px;background:linear-gradient(130deg,#e9f5eb 0%,#f5faf6 70%,#fffaf0 100%)}.eyebrow{display:inline-block;background:#daeadf;padding:5px 12px;border-radius:99px;font-size:12px;font-weight:750;letter-spacing:.06em;text-transform:uppercase;color:var(--green)}h1{font-size:clamp(36px,5vw,58px);line-height:1.12;letter-spacing:-.035em;max-width:800px;margin:18px 0 22px}p.lead{font-size:19px;color:#39594b;max-width:760px;margin:0 0 28px}.cta{display:inline-flex;align-items:center;gap:9px;background:var(--green);color:#fff;text-decoration:none;font-weight:700;padding:13px 19px;border-radius:10px}.cta:hover{background:#124a37}.secondary{margin-left:20px;font-weight:650}
+    section{padding:64px 0}section h2{font-size:29px;letter-spacing:-.02em;margin:0 0 12px}section .intro{color:var(--muted);max-width:700px;margin:0 0 29px}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.card{border:1px solid var(--line);background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 12px #17312a08}.card .num{color:#307d5e;font-size:13px;font-weight:800;letter-spacing:.1em}.card h3{font-size:19px;margin:10px 0 8px}.card p{margin:0;color:var(--muted)}
+    .notice{background:var(--warm);border:1px solid #ecdfc3;border-radius:14px;padding:22px 24px;margin-top:34px}.notice p{margin:0}.fine{color:var(--muted);font-size:14px}footer{border-top:1px solid var(--line);padding:26px 0;background:#fff}footer .container{display:flex;align-items:center;justify-content:space-between;gap:16px}footer a{margin-left:20px} 
+    @media(max-width:730px){header .container,footer .container{flex-wrap:wrap;padding-top:14px;padding-bottom:14px}nav a{margin:0 16px 0 0}.hero{padding:58px 0}.cards{grid-template-columns:1fr}.secondary{display:block;margin:18px 0 0}section{padding:44px 0}footer a{margin:0 18px 0 0}}
+  </style>
+</head>
+<body>
+  <header><div class="container">
+    <a class="brand" href="./" aria-label="2WAY n8n Backup home"><span class="mark" aria-hidden="true">2W</span><span class="brand-copy"><strong>2WAY n8n Backup</strong><small>Personal backup utility</small></span></a>
+    <nav aria-label="Main navigation"><a href="#how-it-works">How it works</a><a href="privacy.html">Privacy Policy</a></nav>
+  </div></header>
+  <main>
+    <div class="hero"><div class="container">
+      <span class="eyebrow">Local-first · Encrypted · Owner-operated</span>
+      <h1>Encrypted backups for a self-hosted n8n installation.</h1>
+      <p class="lead">2WAY n8n Backup is a personal setup that helps the owner preserve a local Docker-based n8n instance and store encrypted backup archives in the owner's Google Drive account.</p>
+      <a class="cta" href="privacy.html">Read our Privacy Policy <span aria-hidden="true">→</span></a>
+      <a class="secondary" href="https://github.com/hientrinh286/2way-n8n-backup">Project on GitHub</a>
+    </div></div>
+    <section id="how-it-works"><div class="container">
+      <h2>How the backup process works</h2>
+      <p class="intro">The n8n application remains self-hosted on the owner's Windows computer. Google Drive is used only as an off-site destination for encrypted backup files.</p>
+      <div class="cards">
+        <article class="card"><span class="num">01 / LOCAL</span><h3>Create a local backup</h3><p>A backup archive is created from the owner's n8n Docker data volume on the local Windows computer.</p></article>
+        <article class="card"><span class="num">02 / ENCRYPT</span><h3>Encrypt with Rclone Crypt</h3><p>Rclone Crypt encrypts the backup archive and its filename before it is uploaded to cloud storage.</p></article>
+        <article class="card"><span class="num">03 / STORE &amp; RESTORE</span><h3>Use personal Google Drive</h3><p>The encrypted archive is stored in the owner's Google Drive account. The owner can download and decrypt a backup to recover it.</p></article>
+      </div>
+      <div class="notice"><p><strong>Important:</strong> This is an informational page for an owner-operated backup workflow, not a public backup service. It does not provide public uploads, account registration, or access to 2WAY English student records. The owner controls backup scheduling, retention, access, and recovery.</p></div>
+    </div></section>
+    <section style="padding-top:0"><div class="container"><h2>Google Drive access</h2><p class="intro">The desktop OAuth connection is used by Rclone to manage the owner's backup files in Google Drive. Authorization is granted through Google's sign-in and consent screen. See the <a href="privacy.html">Privacy Policy</a> for the types of data processed and how the backup works.</p><p class="fine">This site is hosted on GitHub Pages and has no login form or tracking scripts.</p></div></section>
+  </main>
+  <footer><div class="container"><span class="fine">© 2026 2WAY n8n Backup · Personal use</span><div><a href="privacy.html">Privacy Policy</a><a href="https://github.com/hientrinh286/2way-n8n-backup">GitHub</a></div></div></footer>
+</body>
+</html>

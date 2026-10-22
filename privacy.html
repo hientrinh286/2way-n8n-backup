@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy Policy for the personal 2WAY n8n Backup utility and its use of Google Drive through Rclone.">
+  <title>Privacy Policy — 2WAY n8n Backup</title>
+  <style>
+    :root{color-scheme:light;--green:#1b6149;--ink:#17312a;--muted:#52665b;--line:#dae5dc}*{box-sizing:border-box}body{margin:0;background:#f8faf8;color:var(--ink);font:16px/1.7 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}a{color:var(--green)}a:focus-visible{outline:3px solid #d39f4d;outline-offset:3px}.wrap{max-width:860px;padding:0 25px;margin:auto}header{padding:22px 0;background:#fff;border-bottom:1px solid var(--line)}header .wrap{display:flex;justify-content:space-between;gap:16px;align-items:center}header a{text-decoration:none;font-weight:750}main{padding:50px 0 75px}h1{font-size:clamp(36px,5vw,48px);line-height:1.2;letter-spacing:-.035em;margin:0 0 10px}h2{font-size:22px;line-height:1.3;margin:35px 0 9px}p,li{color:#385448}ul{padding-left:25px}li{padding-bottom:7px}.summary{background:#e9f5ed;border:1px solid #d3e5d8;padding:18px 22px;border-radius:12px;margin-top:28px}.small{font-size:14px;color:var(--muted)}footer{border-top:1px solid var(--line);padding:22px 0;background:#fff} @media(max-width:600px){header .wrap{align-items:flex-start;flex-direction:column}main{padding:34px 0 55px}}
+  </style>
+</head>
+<body>
+<header><div class="wrap"><a href="./">← 2WAY n8n Backup</a><a href="https://github.com/hientrinh286/2way-n8n-backup">GitHub repository</a></div></header>
+<main><div class="wrap">
+  <h1>Privacy Policy</h1>
+  <p class="small"><strong>Effective date:</strong> October 22, 2026 · <strong>Last updated:</strong> October 22, 2026</p>
+  <div class="summary"><strong>At a glance:</strong> 2WAY n8n Backup is a personal, owner-operated backup setup. Rclone is used on the owner's Windows computer to upload encrypted n8n backup archives to the owner's Google Drive. This informational website does not collect backup files or authenticate users.</div>
+  <h2>1. Purpose and scope</h2>
+  <p>This policy describes how the personal 2WAY n8n Backup setup accesses and uses Google Drive data. It is not a public software-as-a-service product. It is not the 2WAY English student or parent portal.</p>
+  <h2>2. Data accessed</h2>
+  <p>When the owner signs into Google through Rclone, Google grants access according to the permissions shown on the OAuth consent screen. The access is used for creating, uploading, listing, downloading, and managing backup files in the owner's Google Drive account.</p>
+  <p>Local n8n backup archives may contain workflow definitions, application configuration, the SQLite database, and encrypted n8n credentials. The exact contents depend on the owner's n8n setup. The informational website itself does not receive or process those archives.</p>
+  <h2>3. How data is used and protected</h2>
+  <ul>
+    <li>The owner's backup process creates an archive on the local Windows computer.</li>
+    <li>Rclone Crypt is used to encrypt backup content and filenames before uploading to Google Drive.</li>
+    <li>The encrypted archives are stored in the Google Drive account selected by the owner.</li>
+    <li>Rclone's Google OAuth authorization is stored locally in the owner's Rclone configuration. Encryption passwords and recovery credentials must be retained securely by the owner.</li>
+    <li>Backup archives are accessed or restored only at the owner's direction or through automation the owner explicitly configures.</li>
+  </ul>
+  <p>Encryption protects file contents before upload, but Google may still process cloud-storage metadata such as file sizes and timestamps under Google's own policies. No claim is made that the system has undergone an independent security audit.</p>
+  <h2>4. Sharing and external services</h2>
+  <p>Google Drive provides storage for encrypted archives, and Google provides OAuth authentication. GitHub Pages hosts this public informational website. The site contains no embedded analytics scripts, advertising pixels, account-creation forms, or file-upload controls. Google and GitHub may process service-related logs and metadata under their own terms and privacy policies.</p>
+  <p>The owner does not use backup data for advertising or sell backup data to third parties. Backup data is not sent to the public GitHub repository or to GitHub Pages.</p>
+  <h2>5. Retention and deletion</h2>
+  <p>Backup files remain in the owner's Google Drive until the owner deletes them or activates a retention policy. Retention and deletion are controlled by the owner, not by this website. Revoking Google access stops future authorized Rclone operations; it does not automatically remove backup files already stored in Google Drive.</p>
+  <h2>6. Security and restoration responsibilities</h2>
+  <p>The owner is responsible for protecting the local computer, Google account, Rclone configuration, encryption passwords, and recovery keys. To restore from a backup, the owner needs both the encrypted archive and the corresponding decryption information.</p>
+  <h2>7. Changes to this policy</h2>
+  <p>This policy may be updated if the backup workflow, permissions, or handling of Google data changes. The latest version will appear on this page with an updated date.</p>
+  <h2>8. Contact</h2>
+  <p>For questions about this personal backup setup or its data handling, contact the owner through the <a href="https://github.com/hientrinh286/2way-n8n-backup">project's GitHub repository</a>.</p>
+  <p class="small">This policy describes the intended owner-operated setup and must be kept aligned with the actual permissions and backup configuration in use.</p>
+</div></main>
+<footer><div class="wrap"><a href="./">Home</a> · <a href="privacy.html">Privacy Policy</a> · <span class="small">© 2026 2WAY n8n Backup</span></div></footer>
+</body>
+</html>
